@@ -18,9 +18,13 @@ public class PlayerCollision : MonoBehaviour
         hitTime = Time.time;
 
         if (hits > meshes.Count)
+        {
             Debug.Log("mesh count doesn't match the hit count.");
+        }
         else
+        {
             DecideChildMesh();
+        }
     }
 
     void OnCollisionEnter(Collision collisionInfo)
