@@ -58,7 +58,7 @@ public class PlayerCollision : MonoBehaviour
                 Destroy(activeMesh);
 
             Debug.Log("hits: " + hits);
-
+            // change mesh with cracked ice mesh
             activeMesh = GameObject.Instantiate(meshes[hits - 1], transform.position, transform.rotation, transform);
         }
     }
