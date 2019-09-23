@@ -7,12 +7,12 @@ public class ObstacleCollision : MonoBehaviour
     public GameObject crackedIceBlock;
     void OnCollisionEnter(Collision collisionInfo)
     {
-        if (collisionInfo.collider.tag == "Obstacle")
+        if (collisionInfo.collider.tag == "Player")
         {
             //init cracked obstacle 
-            GameObject.Instantiate(crackedIceBlock,transform.position,transform.rotation);
+            GameObject.Instantiate(crackedIceBlock, transform.position, transform.rotation);
             //destroy previous
-           // Destroy(collisionInfo.gameObject);
+            // Destroy(collisionInfo.gameObject); - obstacle is destroyed 
         }
     }
 }

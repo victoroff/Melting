@@ -68,7 +68,7 @@ public class BlockManager : MonoBehaviour
             return;
         }
 
-        for (int i = 0; i < activeBlocks.Count; i++)
+        for (int i = 0; i < activeBlocks.Count - 1; i++)
         {
             // second parameter is for delaying the destroy so the player could pass by
             Destroy(activeBlocks[i],2f);
