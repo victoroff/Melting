@@ -52,7 +52,7 @@ public class PlayerCollision : MonoBehaviour
 
     void DecideChildMesh()
     {
-        if ((hits <= meshes.Count) && (hits >= 0))
+        if ((hits <= meshes.Count) && (hits > 0))
         {
             if (activeMesh != null)
                 Destroy(activeMesh);
