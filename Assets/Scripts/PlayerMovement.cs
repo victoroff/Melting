@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody player;
-    public Transform playerMelting;
-    public MeshRenderer meltingMesh;
+   // public Transform playerMelting;
+   // public MeshRenderer meltingMesh;
+    public GameObject playerMelting;
     public float forwardForce = 2000f;
     public float sidewaysForce = 500f;
     void FixedUpdate()
@@ -26,9 +27,10 @@ public class PlayerMovement : MonoBehaviour
         if (Time.timeSinceLevelLoad > timeToMelt)
         {
             //make render move down
-            playerMelting.position.Set(playerMelting.position.x, playerMelting.position.y - 0.03f, playerMelting.position.z); // not working
-            //meltingMesh.
-            Debug.Log(player.position);
+            Vector3 melted = playerMelting.transform.position;
+            melted.y -= 0.0002f;
+            playerMelting.transform.position = melted;
+
             timeToMelt = Time.timeSinceLevelLoad;    
             
         }

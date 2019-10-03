@@ -155,8 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 611674250}
-  playerMelting: {fileID: 2103021155}
-  meltingMesh: {fileID: 2103021157}
+  playerMelting: {fileID: 2103021154}
   forwardForce: 3000
   sidewaysForce: 100
 --- !u!65 &611674246
@@ -1162,7 +1161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103021154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 611674249}
