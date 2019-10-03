@@ -154,7 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c1e7a259536904b80cce3ba34f3b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 611674250}
+  player: {fileID: 611674250}
+  playerMelting: {fileID: 2103021155}
+  meltingMesh: {fileID: 2103021157}
   forwardForce: 3000
   sidewaysForce: 100
 --- !u!65 &611674246
@@ -1147,7 +1149,7 @@ GameObject:
   - component: {fileID: 2103021157}
   m_Layer: 0
   m_Name: PlayerMelting
-  m_TagString: Untagged
+  m_TagString: Player_Melting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
