@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\TileManager.cs" />
+    <Compile Include="Assets\SnowflakeManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/6360/Documents/Unity/Melting/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

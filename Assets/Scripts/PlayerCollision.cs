@@ -48,6 +48,10 @@ public class PlayerCollision : MonoBehaviour
                 DecideChildMesh();
             }
         }
+        if (collisionInfo.collider.tag == "Snowflake")
+        {
+
+        }
     }
 
     void DecideChildMesh()
