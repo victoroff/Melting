@@ -6,10 +6,10 @@ public class TileManager : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
     private Transform playerTransform;
-    private float spawnZ = 33.0f;
-    private float tileLength = 3f;
-    private float safeZone = 3f;
-    private int amtTilesOnScreen = 3;
+    private float spawnZ = 70.0f;
+    private float tileLength = 19f;
+    private float safeZone = 9f;
+    private int amtTilesOnScreen = 4;
     private List<GameObject> activeTiles; 
 
     // Start is called before the first frame update
@@ -17,8 +17,12 @@ public class TileManager : MonoBehaviour
     {
         activeTiles = new List<GameObject>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        //SpawnTile();
-       // DestroyTile();
+        for (int i = 0; i < 8; i++)
+        {
+            SpawnTile();
+        }
+        
+        // DestroyTile();
     }
 
     // Update is called once per frame

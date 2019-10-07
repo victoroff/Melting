@@ -50,7 +50,7 @@ public class PlayerCollision : MonoBehaviour
         }
         if (collisionInfo.collider.tag == "Snowflake")
         {
-
+            //todo
         }
     }
 

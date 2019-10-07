@@ -16,7 +16,7 @@ public class BlockManager : MonoBehaviour
     // managable distance for ice block spawning
     public float spawnDistance = 1f;
 
-    private float spawnTime = 3f;
+    private float spawnTime = 1f;
     private List<GameObject> activeBlocks;
 
     private void Start()
@@ -25,7 +25,7 @@ public class BlockManager : MonoBehaviour
         activeBlocks = new List<GameObject>();
 
         SpawnBlocks(spawnDistance);
-        DestroyBlocks();
+        // DestroyBlocks();
     }
     
     void Update()

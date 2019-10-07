@@ -38,14 +38,14 @@ public class SnowflakeManager : MonoBehaviour
         //measure from the current loaded scene not from the begining of the game
         if (Time.timeSinceLevelLoad >= spawnTime)
         {
-            SpawnSnowflake(spawnDistance);
+            SpawnSnowflakes(spawnDistance);
             spawnTime = Time.timeSinceLevelLoad + WaveTime;
             DestroySnowflakes();
         }
 
     }
 
-    private void SpawnSnowflake(float spawnDistance)
+    private void SpawnSnowflakes(float spawnDistance)
     {
         int randIdx = Random.Range(0, spawnPoints.Length + 1);
         for (int i = 0; i < spawnPoints.Length - 1; i++)
