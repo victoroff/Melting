@@ -19,15 +19,17 @@ public class SnowflakeManager : MonoBehaviour
     public float spawnDistance = 1f;
 
     private float spawnTime = 3f;
-    private List<GameObject> activeBlocks;
+    private List<GameObject> activeflakes;
 
     private void Start()
     {
         // collection to keep last blocks before spawn
-        activeBlocks = new List<GameObject>();
+        activeflakes = new List<GameObject>();
 
-        SpawnSnowflake(spawnDistance);
-        DestroySnowflakes();
+
+        // no need to spawn flakes at the beggining
+        //SpawnSnowflake(spawnDistance);
+        //DestroySnowflakes();
     }
 
     void Update()
@@ -46,7 +48,7 @@ public class SnowflakeManager : MonoBehaviour
     private void SpawnSnowflake(float spawnDistance)
     {
         int randIdx = Random.Range(0, spawnPoints.Length + 1);
-        for (int i = 0; i < spawnPoints.Length; i++)
+        for (int i = 0; i < spawnPoints.Length - 1; i++)
         {
             // Debug.Log("randIDx:" + randIdx + "i:" + i);
             if (randIdx != i)
@@ -54,25 +56,25 @@ public class SnowflakeManager : MonoBehaviour
                 GameObject snowflake;
                 var snowflakePosition = spawnPoints[i].position;
                 snowflakePosition.z += player.position.z + spawnDistance;
-                snowflake = Instantiate(snowFlakePrefab, snowflakePosition, Quaternion.identity);
+                snowflake = Instantiate(snowFlakePrefab, snowflakePosition, snowFlakePrefab.transform.rotation);
 
-                activeBlocks.Add(snowflake);
+                activeflakes.Add(snowflake);
             }
         }
     }
     private void DestroySnowflakes()
     {
         // in order to keep the bugs out
-        if (activeBlocks.Count == 0)
+        if (activeflakes.Count == 0)
         {
             return;
         }
 
-        for (int i = 0; i < activeBlocks.Count - 1; i++)
+        for (int i = 0; i < activeflakes.Count; i++)
         {
             // second parameter is for delaying the destroy so the player could pass by
-            Destroy(activeBlocks[i], 2f);
-            activeBlocks.RemoveAt(i);
+            Destroy(activeflakes[i], 2f);
+            activeflakes.RemoveAt(i);
         }
         //passedBlocks = 0;
 
