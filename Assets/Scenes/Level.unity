@@ -263,6 +263,7 @@ MonoBehaviour:
   meshes: []
   movement: {fileID: 611674245}
   hits: 0
+  playerMelting: {fileID: 0}
 --- !u!1 &658915943
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 658915944}
   m_Layer: 0
-  m_Name: IceBlockSpawn_mid
+  m_Name: IceblockSpawn_mid
   m_TagString: Obstacle
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -873,7 +874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641129978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.35, y: 1, z: 19.499992}
+  m_LocalPosition: {x: -0.35, y: 1.56, z: 19.499992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -889,7 +890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1708660154}
   m_Layer: 0
-  m_Name: IceBlockSpawn_left
+  m_Name: IceblockSpawn_left
   m_TagString: Obstacle
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -933,7 +934,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772919888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.1, y: 1, z: 19.499992}
+  m_LocalPosition: {x: 5.1, y: 1.56, z: 19.499992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1049,7 +1050,7 @@ GameObject:
   - component: {fileID: 1874812727}
   - component: {fileID: 1874812726}
   m_Layer: 0
-  m_Name: IceBlockManager
+  m_Name: IceblockManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1089,7 +1090,7 @@ MonoBehaviour:
   player: {fileID: 611674249}
   movement: {fileID: 611674245}
   WaveTime: 1
-  spawnDistance: 1
+  spawnDistance: 49
 --- !u!65 &1874812727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1217,7 +1218,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038439848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.04, y: 1, z: 19.5}
+  m_LocalPosition: {x: -6.04, y: 1.56, z: 19.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1351,12 +1352,12 @@ MonoBehaviour:
   - {fileID: 2038439849}
   - {fileID: 1641129979}
   - {fileID: 1772919889}
-  snowFlakePrefab: {fileID: 3448300170071117827, guid: 077652a7637a8144192393461c64f67d,
+  snowFlakePrefab: {fileID: 3991942495376270979, guid: e28892cc1262a11479387a106486fca3,
     type: 3}
   player: {fileID: 611674249}
   movement: {fileID: 611674245}
   WaveTime: 1
-  spawnDistance: 1
+  spawnDistance: 39
 --- !u!65 &2109260084
 BoxCollider:
   m_ObjectHideFlags: 0

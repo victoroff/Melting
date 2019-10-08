@@ -11,7 +11,8 @@ public class PlayerCollision : MonoBehaviour
     float hitTime;
     GameManager gameManager;
     GameObject activeMesh;
-
+    //melting mesh 
+    public GameObject playerMelting;
     private void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
@@ -51,6 +52,19 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.tag == "Snowflake")
         {
             //todo
+            // parent game object 
+            var playedDefY = movement.gameObject.transform.position.y;
+
+            Vector3 reMelt = playerMelting.transform.position;
+            reMelt.y += 0.0001f;
+
+            //cannot let ice cube float 
+            if (reMelt.y <= playedDefY)
+            {
+                playerMelting.transform.position = reMelt;
+
+            }
+            
         }
     }
 

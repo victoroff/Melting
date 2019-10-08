@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-public class BlockManager : MonoBehaviour
+public class IceblockManager : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject blockPrefab;
@@ -14,9 +14,9 @@ public class BlockManager : MonoBehaviour
 
     // time to spond each block
     // managable distance for ice block spawning
-    public float spawnDistance = 1f;
+    public float spawnDistance = 49f;
 
-    private float spawnTime = 1f;
+    private float spawnTime = 3f;
     private List<GameObject> activeBlocks;
 
     private void Start()
