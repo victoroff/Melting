@@ -6,19 +6,25 @@ public class TileManager : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
     private Transform playerTransform;
-    private float spawnZ = 67.0f;
-    private float tileLength = 19f;
-    private float safeZone = 70f;
+
+    private float spawnZ = 17f;
+
+    private float tileLength = 19.07f;
     private int amtTilesOnScreen = 8;
+
+    private float safeZone = 67.0f;
     private List<GameObject> activeTiles; 
 
-    // Start is called before the first frame update
     void Start()
     {
         activeTiles = new List<GameObject>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        SpawnTile();
         
+        for (int i = 0; i < amtTilesOnScreen; i++)
+        {
+            SpawnTile();
+
+        }
         
         // DestroyTile();
     }
@@ -33,12 +39,12 @@ public class TileManager : MonoBehaviour
         }
     }
 
-    void SpawnTile() {
+    private void SpawnTile(int prefabIndex = -1) {
         GameObject go;
         go = Instantiate(tilePrefabs[0] as GameObject);
         go.transform.SetParent(transform);
         go.transform.position = Vector3.forward * spawnZ;
-        spawnZ += go.transform.position.z;
+        spawnZ += tileLength;
         activeTiles.Add(go);
     }
     private void DestroyTile()

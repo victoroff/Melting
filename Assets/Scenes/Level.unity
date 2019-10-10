@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 611674250}
   playerMelting: {fileID: 2103021154}
-  forwardForce: 3000
+  forwardForce: 4000
   sidewaysForce: 100
 --- !u!65 &611674246
 BoxCollider:
@@ -225,7 +225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611674244}
   m_LocalRotation: {x: 0.003861064, y: 0, z: 0, w: 0.9999926}
-  m_LocalPosition: {x: 0, y: 1.0599997, z: -6.5}
+  m_LocalPosition: {x: 0, y: 1.0599997, z: -5.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2103021155}
@@ -463,7 +463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26, y: 2.0499997, z: -11.4}
+  m_LocalPosition: {x: 0.26, y: 2.0499997, z: -10.25}
   m_LocalScale: {x: 1, y: 2.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
