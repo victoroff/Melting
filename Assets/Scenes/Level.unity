@@ -1443,6 +1443,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceTile
       objectReference: {fileID: 0}
+    - target: {fileID: 4965268995958294640, guid: 1d9b0011ef3eb314587f4b3c1120b326,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4965268995958294644, guid: 1d9b0011ef3eb314587f4b3c1120b326,
         type: 3}
       propertyPath: m_LocalPosition.x
