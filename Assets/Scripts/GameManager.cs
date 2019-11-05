@@ -20,9 +20,9 @@ public class GameManager : MonoBehaviour
     {
         if (gameHasEnded == false)
         {
-            Debug.Log("Game Over");
             gameHasEnded = true;
 
+            //need to put toggleEndMenu here and do not restart the game
             //restart game
             Invoke("RestartGame", restartDelay);
         }
