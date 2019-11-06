@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
-    public float restartDelay = 1f;
+    public DeathMenu deathMenu;
    // public GameObject completeLevelUI;
 
     // complete level - we are not completing levels because it is endless sliding
@@ -21,10 +21,10 @@ public class GameManager : MonoBehaviour
         if (gameHasEnded == false)
         {
             gameHasEnded = true;
+            
 
-            //need to put toggleEndMenu here and do not restart the game
-            //restart game
-            Invoke("RestartGame", restartDelay);
+            //need to set score on death
+            deathMenu?.ToggleEndMenu(0f);
         }
 
     }
